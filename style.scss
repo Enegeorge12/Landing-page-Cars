@@ -1,0 +1,251 @@
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0px;
+    font-family: "Gill Sans", sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 100px;
+
+    box-shadow: 0px 10px 8px 0px rgb(238, 234, 234);
+
+    button {
+        font-weight: bold;
+    }
+
+
+}
+
+.contentContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .description {
+        width: 50%;
+        display: flex;
+        overflow: hidden;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 20px;
+
+        a {
+            background-color: #DC143C;
+            color: white;
+            text-decoration: none;
+            padding: 6px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 60px;
+            text-align: center;
+            transition: transform .2s;
+
+            &:hover {
+                transform: scale(1.5);
+            }
+
+        }
+
+    }
+
+    .img {
+        width: 50%;
+        height: 100%;
+        padding: 40px;
+
+        .fa-map-marker {
+            margin-right: 10px;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        p {
+            width: 100%;
+            margin-top: 0px;
+            margin-bottom: 20px;
+            padding: 10px;
+            box-shadow: 5px 5px 5px 5px rgb(238, 234, 234);
+
+        }
+    }
+}
+
+.tablink {
+    background-color: rgb(201, 196, 196);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    padding: 8px 10px;
+    font-size: 16px;
+    width: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+}
+
+.activeTab {
+    background-color: #DC143C;
+    color: white;
+    transition: all 0.5s ease-in-out;
+
+}
+
+.tablink:hover {
+    background-color: #DC143C;
+    transition: all 0.5s ease-in-out;
+}
+
+.tabcontent {
+    color: black;
+    height: 100%;
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+
+
+}
+
+.footer {
+    background-color: #F5F5F5;
+    display: flex;
+    flex-direction: row;
+    padding: 50px;
+
+    width: 100%;
+
+    .footerLinks {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        text-align: center;
+        border-right: 2px solid rgb(238, 234, 234);
+        margin-left: 150px;
+    }
+
+    .links {
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        height: 100%;
+
+
+        a {
+            padding: 5px;
+            border-radius: 5px;
+            border: 3px solid #DC143C;
+            text-decoration: none;
+            color: #DC143C;
+            font-weight: bold;
+            cursor: pointer;
+
+
+            .fa {
+                color: #DC143C;
+                margin-right: 5px;
+                font-weight: bold;
+            }
+        }
+
+
+
+    }
+
+    .footerTitle {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        margin-right: 150px;
+        align-items: center;
+        
+
+    }
+
+}
+
+@media only screen and (max-width: 700px) {
+    .container {
+        flex-direction: column;
+        gap: 5px;
+
+        .tablink {
+            width: 100%;
+            margin-bottom: 5px;
+
+        }
+    }
+
+    .contentContainer {
+        flex-direction: column;
+
+        .description {
+            width: 100%;
+        }
+
+        .img {
+            width: 100%;
+            padding: 20px;
+        }
+    }
+
+    .footer {
+        flex-direction: column;
+
+        .footerLinks {
+            width: 100%;
+            border-right: 0px;
+
+            .links {
+                flex-wrap: wrap;
+                width: 100%;
+            }
+
+        }
+
+        .footerTitle {
+            width: 100%;
+            text-align: center;
+            margin-top: 20px;
+
+        }
+
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .footer {
+        flex-direction: column;
+
+        .footerLinks {
+            width: 100%;
+            border-right: 0px;
+
+            .links {
+                flex-wrap: wrap;
+                width: 100%;
+            }
+
+        }
+
+        .footerTitle {
+            width: 100%;
+            text-align: center;
+            margin-top: 20px;
+
+        }
+
+    }
+}
